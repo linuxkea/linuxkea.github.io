@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Elective Linux - Ubuntu</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- My own javascript file -->
+    <script src="js/linuxElectiveScript.js">
+    </script>
+
+    <!-- Local javaScript Query file -->
+    <script src="js/jQuery3.2.0.js">
+    </script>
+
+    <script>
+        // Trying jQuery js load
+        $(function() {
+            $('#nav-link li a').on('click', function(e) {
+                e.preventDefault();
+                var page = $(this).attr('href');
+                $('#content').load(page);
+            });
+        });
+    </script>
+</head>
+
+<body onload="checkFileAPI()">
+    <div class="container">
+        <div class="page-header">
+            <h1>
+                <center>
+                    Linux Elective<br />
+                    <small>Learn Linux with Ubuntu</small>
+                </center>
+            </h1>
+        </div>
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav" id="nav-link">
+                    <!-- <li><a href="index.html">Home</a></li> -->
+                    <li><a href="Pages/Schedule.html">Schedule</a></li>
+                    <li><a href="#">readingMaterial</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="content">
+        </div>
+    </div>
+</body>
+
+</html>
