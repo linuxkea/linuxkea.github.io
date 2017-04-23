@@ -32,6 +32,7 @@ function readLessons() {
             '</div>' +
             '</div>';
         //console.log(data);
+        document.getElementById('content').innerHTML = "";
         document.getElementById('content').innerHTML = header + data;
     });
 }

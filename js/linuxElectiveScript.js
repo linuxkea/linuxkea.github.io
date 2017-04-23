@@ -41,6 +41,7 @@ function readSheet() {
             '</h2>' +
             '</div>' +
             '</div>';
+        document.getElementById('content').innerHTML = "";
         document.getElementById('content').innerHTML = header + '<br />' + divElementData;
     });
 }
