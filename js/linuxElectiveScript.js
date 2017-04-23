@@ -19,7 +19,7 @@ function checkFileAPI() {
 }
 
 function readSheet() {
-
+    divElementData = "";
     var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
     //console.log(url);
     $.getJSON(url, function(data) {
@@ -41,8 +41,10 @@ function readSheet() {
             '</h2>' +
             '</div>' +
             '</div>';
-        document.getElementById('content').innerHTML = "";
+        //if (header + '<br />' + divElementData === document.getElementById('content').innerHTML)
+
         document.getElementById('content').innerHTML = header + '<br />' + divElementData;
+
     });
 }
 

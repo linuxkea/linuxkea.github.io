@@ -9,6 +9,7 @@ var lessonSpreadsheetID = "1GLMhpBRmnZSzTMQWHe4RLT25_cOLHiqtu12xLeAxDyU";
 
 /* For reading the lessons google sheet */
 function readLessons() {
+    data = "";
     console.log("Inside read lessones");
     var url = "https://spreadsheets.google.com/feeds/list/" + lessonSpreadsheetID + "/od6/public/values?alt=json";
     //console.log(url);
@@ -31,8 +32,7 @@ function readLessons() {
             '</h2>' +
             '</div>' +
             '</div>';
-        //console.log(data);
-        document.getElementById('content').innerHTML = "";
+        //console.log(data);        
         document.getElementById('content').innerHTML = header + data;
     });
 }
