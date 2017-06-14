@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
+<script>
+    $(function() {
+        $('#live').on('click', function(e) {
+            e.preventDefault();
+            var page = $(this).attr('href');
+            $('#content').load(page);
+        });
+    });
+</script>
 <div class="header">
 
-    <h2>Exam information</h2>
-    <p>
-        See the ExamFile
-    </p>
+    <h2>Exam Files</h2>
+
     <h2>Links to the exam's document</h2>
     <h4>Dato: 14-06-2017</h4>
     <table class="table">
@@ -14,6 +21,12 @@
             <th>
                 <center>Link</center>
             </th>
+        </tr>
+        <tr>
+            <td>Load Here</td>
+            <td>
+                <center><a id="live" href="https://docs.google.com/document/d/1b16dzzkUlvmaIFYOy7H_KTVtE_JG0K6xO1ElEaDe1hA/pub">Load</a></center>
+            </td>
         </tr>
         <tr>
             <td>PDF format</td>
@@ -29,6 +42,7 @@
         </tr>
     </table>
     <br />
+    <hr style="border: 1px solid brown; color: brown;" />
     <br />
     <h2>Old exam's document</h2>
 
